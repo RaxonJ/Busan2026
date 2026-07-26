@@ -4,6 +4,7 @@ import type { Transport, Activity, Accommodation } from '../types/itinerary';
 import type { ThemeColor } from '../utils/colors';
 import { resolveThemeColor } from '../utils/colors';
 import { getEffectiveMapQuery } from '../utils/mapUrl';
+import { naverSearchUrl } from '../utils/naverMap';
 
 interface TransportSummaryProps {
   transport: Transport;
@@ -25,7 +26,8 @@ export function TransportSummary({ transport, themeColor, activities, accommodat
     return a.time.localeCompare(b.time);
   });
 
-  // 建構 Google Maps 路線 URL（以前一天住宿為起點）
+  // 建構路線連結：Naver 地圖無法以「地名」串接多點路線，
+  // 故改為開啟當日終點（最後一站 / 住宿）的 Naver 地圖搜尋，抵達後於 App 內導航。
   const buildRouteUrl = () => {
     const waypoints: string[] = [];
     if (prevAccommodation?.mapQuery) waypoints.push(prevAccommodation.mapQuery);
@@ -35,8 +37,8 @@ export function TransportSummary({ transport, themeColor, activities, accommodat
     });
     if (accommodation?.mapQuery) waypoints.push(accommodation.mapQuery);
     if (waypoints.length < 2) return null;
-    const encodedWaypoints = waypoints.map(w => encodeURIComponent(w)).join('/');
-    return `https://www.google.com/maps/dir/${encodedWaypoints}`;
+    const destination = waypoints[waypoints.length - 1];
+    return naverSearchUrl(destination);
   };
 
   // 自動從景點標題產生路線描述

@@ -1,58 +1,36 @@
-import { useState, useEffect } from 'react';
-import { MapPin, ChevronDown } from 'lucide-react';
+import { MapPin, ExternalLink } from 'lucide-react';
+import { naverSearchUrl } from '../utils/naverMap';
 
 interface MapEmbedProps {
   mapQuery: string;
   title?: string;
-  isOpen: boolean;
-  onToggle: () => void;
+  /** @deprecated 保留以相容既有呼叫端；改為外開 Naver 地圖後不再使用手風琴開合狀態 */
+  isOpen?: boolean;
+  /** @deprecated 同上 */
+  onToggle?: () => void;
 }
 
-export function MapEmbed({ mapQuery, title, isOpen, onToggle }: MapEmbedProps) {
-  const [hasOpened, setHasOpened] = useState(false);
-
-  useEffect(() => {
-    if (isOpen) setHasOpened(true);
-  }, [isOpen]);
-
-  const handleToggle = () => {
-    if (!isOpen) setHasOpened(true);
-    onToggle();
-  };
-
+/**
+ * 「在 Naver 地圖開啟」連結
+ *
+ * 原本為內嵌 Google Maps iframe，但韓國 Google 圖資受限、內嵌預覽幾乎不可用，
+ * 且 Naver 無免金鑰的 iframe 內嵌方案，故改為直接外開 Naver 地圖搜尋。
+ */
+export function MapEmbed({ mapQuery }: MapEmbedProps) {
   return (
     <div className="mt-2">
-      <button
-        onClick={handleToggle}
-        className="flex items-center gap-2 px-3 py-2 min-h-[44px] rounded-lg text-sm font-medium text-ai hover:bg-ai/5 transition-all"
-        aria-label={isOpen ? '收合地圖' : '展開地圖'}
-        aria-expanded={isOpen}
+      <a
+        href={naverSearchUrl(mapQuery)}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+        className="inline-flex items-center gap-2 px-3 py-2 min-h-[44px] rounded-lg text-sm font-medium text-ai hover:bg-ai/5 transition-all"
+        aria-label="在 Naver 地圖開啟"
       >
         <MapPin className="w-4 h-4" />
-        <span>查看地圖</span>
-        <ChevronDown
-          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
-        />
-      </button>
-
-      <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
-        <div>
-          {hasOpened && (
-            <div className="mt-3 rounded-lg overflow-hidden shadow-md">
-              <iframe
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
-                width="100%"
-                height="200"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                style={{ border: 0 }}
-                title={title ? `Map: ${title}` : `Map: ${mapQuery}`}
-                allowFullScreen
-              />
-            </div>
-          )}
-        </div>
-      </div>
+        <span>在 Naver 地圖開啟</span>
+        <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+      </a>
     </div>
   );
 }

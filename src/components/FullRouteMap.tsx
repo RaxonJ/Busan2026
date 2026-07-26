@@ -1,53 +1,42 @@
-import { ChevronLeft, Map } from 'lucide-react';
+import { ChevronLeft, Map, MapPin, ExternalLink } from 'lucide-react';
 import { useItinerary } from '../hooks/useItinerary';
 import { getEffectiveMapQuery } from '../utils/mapUrl';
+import { naverSearchUrl } from '../utils/naverMap';
 
 interface FullRouteMapProps {
   onBack: () => void;
 }
 
 /**
- * 動態產生全行程路線 URL（iframe 嵌入專用）
- * - 只包含釜山段景點（排除台灣段：桃園機場）
- * - 按天序串連所有 waypoints
+ * 依天序串出全行程景點（釜山段），排除台灣段（桃園／台北）與重複點。
  */
-function buildFullTripRouteUrl(itinerary: ReturnType<typeof useItinerary>[0]): string {
+function buildWaypoints(itinerary: ReturnType<typeof useItinerary>[0]): string[] {
   const taiwanKeywords = ['桃園', '台北'];
-
   const waypoints: string[] = [];
 
   itinerary.forEach((day) => {
     day.activities.forEach((activity) => {
       const query = getEffectiveMapQuery(activity.mapQuery, activity.mapUrl, activity.title);
-      if (query) {
-        // 排除台灣段景點
-        const isTaiwan = taiwanKeywords.some(keyword =>
-          query.includes(keyword)
-        );
-
-        if (!isTaiwan && !waypoints.includes(query)) {
-          waypoints.push(query);
-        }
+      if (!query) return;
+      const isTaiwan = taiwanKeywords.some((keyword) => query.includes(keyword));
+      if (!isTaiwan && !waypoints.includes(query)) {
+        waypoints.push(query);
       }
     });
   });
 
-  // embedUrl: 給 iframe 嵌入
-  // 格式: maps.google.com/maps?saddr=起點&daddr=第2站+to:第3站+to:...+to:終點&output=embed
-  const origin = waypoints[0];
-  const remainingWaypoints = waypoints.slice(1);
-
-  let embedUrl = `https://maps.google.com/maps?saddr=${encodeURIComponent(origin)}&daddr=${remainingWaypoints.map(wp => encodeURIComponent(wp)).join('+to:')}`;
-
-  embedUrl += '&output=embed';
-
-  return embedUrl;
+  return waypoints;
 }
 
+/**
+ * 全行程路線
+ *
+ * 韓國當地使用 Naver 地圖（Google 圖資受限、路線導航不可用），
+ * 故以「依序排列的景點清單」呈現，每一站可直接在 Naver 地圖開啟。
+ */
 export function FullRouteMap({ onBack }: FullRouteMapProps) {
-  // 使用 Supabase 資料（含 localStorage 快取 + fallback）
   const [itinerary] = useItinerary();
-  const embedUrl = buildFullTripRouteUrl(itinerary);
+  const waypoints = buildWaypoints(itinerary);
 
   return (
     <div className="min-h-screen bg-washi pb-20">
@@ -66,29 +55,43 @@ export function FullRouteMap({ onBack }: FullRouteMapProps) {
         </h1>
       </div>
 
-      {/* 地圖內容 */}
       <div className="p-4 space-y-4">
         {/* 說明卡片 */}
         <div className="bg-washi-card border border-washi-border rounded-lg shadow-sm p-4">
           <p className="text-stone">
-            以下為完整旅程的路線規劃，包含所有釜山段景點。點擊地圖可在 Google Maps 中開啟完整路線。
+            以下為完整旅程的釜山段景點（依天序排列）。韓國當地請使用 Naver 地圖，
+            點擊任一站即可在 Naver 地圖開啟。
           </p>
         </div>
 
-        {/* 地圖 iframe */}
-        <div className="bg-washi-card border border-washi-border rounded-lg shadow-sm overflow-hidden">
-          <iframe
-            src={embedUrl}
-            width="100%"
-            height="600"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            style={{ border: 0 }}
-            title="全行程路線地圖"
-            allowFullScreen
-            className="w-full"
-          />
-        </div>
+        {/* 景點清單（每站可開啟 Naver 地圖）*/}
+        {waypoints.length > 0 ? (
+          <ol className="bg-washi-card border border-washi-border rounded-lg shadow-sm divide-y divide-washi-border overflow-hidden">
+            {waypoints.map((wp, index) => (
+              <li key={`${wp}-${index}`}>
+                <a
+                  href={naverSearchUrl(wp)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3.5 min-h-[56px] hover:bg-washi transition-colors group"
+                >
+                  <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full bg-[#2C4F7C] text-white text-sm font-semibold">
+                    {index + 1}
+                  </span>
+                  <MapPin className="w-4 h-4 flex-shrink-0 text-[#2C4F7C]" />
+                  <span className="flex-1 min-w-0 text-ink group-hover:text-[#2C4F7C] transition-colors break-words">
+                    {wp}
+                  </span>
+                  <ExternalLink className="w-4 h-4 flex-shrink-0 text-stone opacity-60 group-hover:opacity-100" />
+                </a>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <div className="bg-washi-card border border-washi-border rounded-lg shadow-sm p-8 text-center text-stone">
+            尚無可顯示的景點
+          </div>
+        )}
       </div>
     </div>
   );

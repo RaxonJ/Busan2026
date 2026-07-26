@@ -218,18 +218,6 @@ export function ActivityCard({ activity, themeColor, index, isExpanded, onToggle
 
             {/* 地圖與照片 */}
             <div className="space-y-2">
-              {activity.mapUrl && (
-                <a
-                  href={activity.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-stone-200 text-sm text-[#2C4F7C] hover:bg-stone-50 transition-colors"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  開啟 Google Maps
-                </a>
-              )}
               {effectiveMapQuery && (
                 <MapEmbed
                   mapQuery={effectiveMapQuery}
