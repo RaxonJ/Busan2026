@@ -11,6 +11,7 @@ import { PackingListEditor } from './PackingListEditor';
 import { ShoppingListEditor } from './ShoppingListEditor';
 import { ConfirmDialog } from './ConfirmDialog';
 import { createDay, deleteDay } from '../../hooks/useAdminMutations';
+import { triggerSnapshot } from '../../lib/snapshotTrigger';
 import type { DayPlanViewRow } from '../../types/database';
 
 type Section = 'day' | 'activities' | 'transport' | 'accommodation' | 'tickets';
@@ -67,7 +68,11 @@ export function AdminLayout({ onClose }: AdminLayoutProps) {
 
   useEffect(() => { loadDays(); }, [refreshKey]);
 
-  const refresh = useCallback(() => setRefreshKey((k) => k + 1), []);
+  const refresh = useCallback(() => {
+    setRefreshKey((k) => k + 1);
+    // 編輯儲存後去抖動觸發雲端備份（未設定 /api/snapshot 時自動忽略）
+    triggerSnapshot();
+  }, []);
 
   const currentDay = days.find((d) => d.day === selectedDay);
   const isDayView = activeView !== 'packing' && activeView !== 'shopping';

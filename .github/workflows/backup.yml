@@ -1,0 +1,54 @@
+name: DB Backup
+
+# 觸發時機：
+#  1. 每日排程（順便讓 Supabase 免費專案不會因閒置而休眠）
+#  2. 手動執行（Actions 頁面 → Run workflow）
+#  3. repository_dispatch(type=snapshot)：由前台編輯後透過 /api/snapshot 觸發（選配）
+on:
+  schedule:
+    - cron: '0 18 * * *'   # 每日 UTC 18:00 ≈ 台灣時間 02:00
+  workflow_dispatch: {}
+  repository_dispatch:
+    types: [snapshot]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: db-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+
+      - name: Run backup
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SNAPSHOT_SOURCE: >-
+            ${{ github.event_name == 'repository_dispatch' && 'edit'
+              || github.event_name == 'schedule' && 'daily'
+              || 'manual' }}
+        run: node scripts/backup.mjs
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "busan-backup-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add backups
+          if git diff --cached --quiet; then
+            echo "資料無變更，不需 commit"
+          else
+            git commit -m "chore(backup): snapshot $(date -u +%FT%TZ) [skip ci]"
+            git push
+          fi
