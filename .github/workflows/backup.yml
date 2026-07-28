@@ -26,7 +26,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # 需 22+：supabase-js 的 realtime 在 Node 20 缺少原生 WebSocket 會報錯
+          node-version: 22
 
       - name: Install deps
         run: npm install --no-audit --no-fund
