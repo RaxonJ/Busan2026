@@ -1,6 +1,7 @@
 import { supabase } from '../lib/supabase';
 import { useSupabaseData } from './useSupabaseData';
 import { itinerary as hardcodedItinerary } from '../data/itinerary';
+import { liveSnapshot } from '../data/liveSnapshot';
 import type { Itinerary } from '../types/itinerary';
 import type { DayPlanViewRow } from '../types/database';
 import { mapDayPlanRows } from '../utils/mappers';
@@ -61,9 +62,11 @@ export function useItinerary(): [Itinerary, boolean, Error | null] {
     return mapped;
   };
 
-  return useSupabaseData<Itinerary>(
-    tripConfig.cacheKey,
-    fetchItinerary,
-    hardcodedItinerary
-  );
+  // fallback 優先用「最後一版」快照（liveSnapshot），無快照才用寫死初版
+  const fallback: Itinerary =
+    liveSnapshot.itinerary.length > 0
+      ? mapDayPlanRows(liveSnapshot.itinerary)
+      : hardcodedItinerary;
+
+  return useSupabaseData<Itinerary>(tripConfig.cacheKey, fetchItinerary, fallback);
 }

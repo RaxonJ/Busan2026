@@ -1,0 +1,832 @@
+{
+  "itinerary": [
+    {
+      "day": 1,
+      "date": "9/23（三）",
+      "title": "落地日：Club D Oasis 汗蒸幕暖身",
+      "themeColor": "blue",
+      "isTravelDay": true,
+      "transport": {
+        "icon": "Car",
+        "mode": "car",
+        "description": "機場包車直接前往海雲台 LCT，車程約 40 分鐘"
+      },
+      "accommodation": {
+        "name": "海雲台飯店",
+        "links": [],
+        "mapQuery": "해운대 호텔",
+        "photoUrl": null,
+        "attachments": [],
+        "description": "靠近 LCT 塔樓，步行可達"
+      },
+      "activities": [
+        {
+          "time": "02:50",
+          "links": [],
+          "title": "台北起飛",
+          "mapUrl": null,
+          "mapQuery": "桃園國際機場",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "深夜出發，06:10 抵達釜山金海國際機場",
+          "activityType": "flight",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "06:10",
+          "links": [],
+          "title": "抵達釜山 / 包車前往海雲台",
+          "mapUrl": null,
+          "mapQuery": "김해국제공항",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "機場包車直達海雲台 LCT 塔樓，車程約 40 分鐘",
+          "activityType": "car",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "08:30",
+          "links": [],
+          "title": "水邊最高豬肉湯飯",
+          "mapUrl": "[NAVER Maps] 水边最好猪肉汤饭海云台站 釜山广域市 海云台区 中洞 1392-35 https://naver.me/5qLkpPxx",
+          "mapQuery": "水邊最高豬肉湯飯",
+          "photoUrl": null,
+          "priority": null,
+          "description": "1392-35 Jung-dong Haeundae-gu Busan",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "10:00",
+          "links": [],
+          "title": "Club D Oasis 汗蒸幕（4 小時）",
+          "mapUrl": "[NAVER Maps] 俱乐部D绿洲水疗&水上乐园 釜山广域市 海云台区 中洞 1829 https://naver.me/IID96Zj0",
+          "mapQuery": "Club D Oasis 해운대",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "海雲台 LCT 塔樓 3–6F｜釜山PASS 可免費換 5 小時入場券\n5F 42°溫泉、6F 五種主題汗蒸房、戶外海景足浴\n泡湯補眠、消去飛行疲勞，等待飯店 check-in",
+          "activityType": "spot",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "13:00",
+          "links": [],
+          "title": "大海鮑魚粥",
+          "mapUrl": "[NAVER Maps] 大海Maru鲍鱼粥 釜山广域市 海云台区 中洞 971 https://naver.me/Ix01Oo2V",
+          "mapQuery": "大海鮑魚粥",
+          "photoUrl": null,
+          "priority": null,
+          "description": "從汗蒸幕走三分鐘就可以吃到了",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "16:00",
+          "links": [],
+          "title": "Check-in 飯店",
+          "mapUrl": "[NAVER Maps] The Place34 釜山广域市 海云台区 中洞 1381-5 https://naver.me/FqIGdikJ",
+          "mapQuery": "해운대 호텔",
+          "photoUrl": null,
+          "priority": null,
+          "description": "放行李、整理後正式展開釜山之旅",
+          "activityType": "hotel",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "18:00",
+          "links": [],
+          "title": "柳氏家辣炒鐵板雞排",
+          "mapUrl": "[NAVER Maps] 柳氏家铁板鸡海云台站 釜山广域市 海云台区 佑洞 542-12 https://naver.me/Gi0jIbyO",
+          "mapQuery": "柳氏家辣炒鐵板雞排",
+          "photoUrl": null,
+          "priority": null,
+          "description": null,
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "20:00",
+          "links": [],
+          "title": "海雲台市場",
+          "mapUrl": "[NAVER Maps] 釜山海云台市场 釜山广域市 海云台区 中洞  1395-21 https://naver.me/FAAMSDXH",
+          "mapQuery": "海雲台市場",
+          "photoUrl": null,
+          "priority": null,
+          "description": "糖餅、蔥餅、飯卷",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        }
+      ],
+      "tickets": [
+        {
+          "name": "去程班機",
+          "type": "flight",
+          "notes": "4 位旅客，確認行李規定",
+          "datetime": "02:50 TPE → 06:10 PUS（金海機場）",
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "9/24（四）",
+      "title": "海雲台核心：膠囊列車 × Arte Museum",
+      "themeColor": "cyan",
+      "isTravelDay": false,
+      "transport": {
+        "icon": "Train",
+        "mode": "public",
+        "description": "膠囊列車往返尾浦↔青沙埔，下午步行或計程車至 Arte Museum"
+      },
+      "accommodation": {
+        "name": "海雲台飯店",
+        "links": [],
+        "mapQuery": "해운대 호텔",
+        "photoUrl": null,
+        "attachments": [],
+        "description": "續住"
+      },
+      "activities": [
+        {
+          "time": "09:00",
+          "links": [],
+          "title": "自然島鹽麵包",
+          "mapUrl": "[NAVER Maps] Jayeon Do盐面包&自然Do Hae 釜山广域市 海云台区 中洞 1085-4 https://naver.me/FFqjAJfK",
+          "mapQuery": "自然島鹽麵包",
+          "photoUrl": null,
+          "priority": null,
+          "description": "九點開賣 可以先去排隊買麵包在膠囊列車上吃 只接受信用卡結帳",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "10:00",
+          "links": [],
+          "title": "膠囊列車（블루라인파크）",
+          "mapUrl": "[NAVER Maps] 海云台Blue Line Park Mipo停车场 釜山广域市 海云台区 中洞 1019-2 https://naver.me/x7egq6Vh",
+          "mapQuery": "膠囊列車（블루라인파크）",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "尾浦→青沙埔，靠海車廂海景絕美\n8/25 早上六點訂票！10:00（早上拍比較不會有陰影）",
+          "activityType": "train",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "10:30",
+          "links": [],
+          "title": "小鎌倉",
+          "mapUrl": null,
+          "mapQuery": null,
+          "photoUrl": null,
+          "priority": null,
+          "description": "下車後就可以看到",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "11:00",
+          "links": [],
+          "title": "lua & Tigre",
+          "mapUrl": "[NAVER Maps] Rua&Tigeuri 釜山广域市 海云台区 中洞 505-3 https://naver.me/5l2smIwy",
+          "mapQuery": "lua & Tigre",
+          "photoUrl": null,
+          "priority": null,
+          "description": "pizza 義大利麵",
+          "activityType": "food",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "14:00",
+          "links": [],
+          "title": "Liberta 麵包咖啡/broni cafe",
+          "mapUrl": "[NAVER Maps] Ribereuta青沙浦店 釜山广域市 海云台区 中洞 524-14 https://naver.me/FIcS2Qrv",
+          "mapQuery": "청사포 liberta",
+          "photoUrl": null,
+          "priority": null,
+          "description": "下車後散步逛小村，吃早午餐、喝咖啡\n兩間評價都很好 可擇一",
+          "activityType": "coffee",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "15:00",
+          "links": [],
+          "title": "海岸列車",
+          "mapUrl": null,
+          "mapQuery": null,
+          "photoUrl": null,
+          "priority": null,
+          "description": "可用釜山pass免費搭回尾埔",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "16:00",
+          "links": [],
+          "title": "海雲台商圈",
+          "mapUrl": "[NAVER Maps] Mipi商店釜山 釜山广域市 海云台区 中洞 1035-2 https://naver.me/5VxWBgWs",
+          "mapQuery": "海雲台商圈",
+          "photoUrl": null,
+          "priority": null,
+          "description": "新的米菲兔專賣店在這附近！",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "18:00",
+          "links": [],
+          "title": "辣燉排骨 玉米煎餅",
+          "mapUrl": "[NAVER Maps] 红猪三昧境 釜山广域市 釜山镇区 釜田洞 100-6 https://naver.me/xbKHqc4o",
+          "mapQuery": "빨간돼지삼매경",
+          "photoUrl": null,
+          "priority": null,
+          "description": "辣燉排骨店家會去骨 最後還可以炒飯\n明太魚湯和有玉米煎餅推推",
+          "activityType": "food",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        }
+      ],
+      "tickets": [
+        {
+          "name": "海雲台 블루라인파크 膠囊列車",
+          "type": "train",
+          "notes": "提前一個月訂票，官網訂位",
+          "datetime": "09:00–09:30 首班｜尾浦→青沙埔靠海車廂",
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "9/25（五）",
+      "title": "松島纜車 × 影島白淺灘文化村",
+      "themeColor": "green",
+      "isTravelDay": false,
+      "transport": {
+        "icon": "Bus",
+        "mode": "public",
+        "description": "地鐵或計程車至松島，下午轉往影島白淺灘文化村"
+      },
+      "accommodation": {
+        "name": "海雲台飯店",
+        "links": [],
+        "mapQuery": "해운대 호텔",
+        "photoUrl": null,
+        "attachments": [],
+        "description": "續住"
+      },
+      "activities": [
+        {
+          "time": "10:30",
+          "links": [],
+          "title": "Arte Museum",
+          "mapUrl": "[NAVER Maps] Arte博物馆釜山 釜山广域市 影岛区 东三洞 201-74 https://naver.me/50BGikfO",
+          "mapQuery": "Arte Museum",
+          "photoUrl": null,
+          "priority": null,
+          "description": null,
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "13:00",
+          "links": [],
+          "title": "momos",
+          "mapUrl": "[NAVER Maps] Momoseu咖啡烘焙工坊&咖啡吧 釜山广域市 影岛区 蓬莱洞二街 131 https://naver.me/GVVDKEUi",
+          "mapQuery": "momos",
+          "photoUrl": null,
+          "priority": null,
+          "description": "可以買咖啡豆",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "13:30",
+          "links": [],
+          "title": "李宰模披薩",
+          "mapUrl": "[NAVER Maps] Ijaemo比萨总店 釜山广域市 中区 新昌洞一街 2-1 https://naver.me/I5wNWFVW",
+          "mapQuery": "이재모피자 본점",
+          "photoUrl": null,
+          "priority": null,
+          "description": "李宰模披薩 總店\n起司脆皮披薩 餅邊全起司 全香腸\n七天前訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/leejaemo",
+          "activityType": "food",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "14:30",
+          "links": [],
+          "title": "影島 白淺灘文化村",
+          "mapUrl": null,
+          "mapQuery": "흰여울문화마을 영도",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "釜山最文青的壁畫村，Lisboa、Aether 咖啡、海景步道\n黃昏時分最美",
+          "activityType": "spot",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "15:00",
+          "links": [],
+          "title": "having moment cafe",
+          "mapUrl": "[NAVER Maps] having moment 釜山广域市 影岛区 瀛仙洞四街 612 https://naver.me/Fjb6peEc",
+          "mapQuery": "having moment cafe",
+          "photoUrl": null,
+          "priority": null,
+          "description": "黑芝麻奶油拿鐵 軟餅乾 ",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "17:00",
+          "links": [],
+          "title": "新世界百貨逛街！",
+          "mapUrl": null,
+          "mapQuery": null,
+          "photoUrl": null,
+          "priority": null,
+          "description": "3樓先辦會員拿優惠券",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "19:00",
+          "links": [],
+          "title": "gowon烤肉",
+          "mapUrl": "312-26 Jeonpo-dong Busanjin-gu Busan",
+          "mapQuery": "gowon烤肉",
+          "photoUrl": null,
+          "priority": null,
+          "description": "10天前開放訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/gowon",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        }
+      ],
+      "tickets": []
+    },
+    {
+      "day": 4,
+      "date": "9/26（六）",
+      "title": "斜坡滑車 × 廣安里無人機煙火秀 ★",
+      "themeColor": "amber",
+      "isTravelDay": false,
+      "transport": {
+        "icon": "Car",
+        "mode": "car",
+        "description": "上午包車或計程車往機張，晚上計程車前往廣安里"
+      },
+      "accommodation": {
+        "name": "海雲台飯店",
+        "links": [],
+        "mapQuery": "해운대 호텔",
+        "photoUrl": null,
+        "attachments": [],
+        "description": "續住"
+      },
+      "activities": [
+        {
+          "time": "10:30",
+          "links": [],
+          "title": "Skyline Luge 斜坡滑車（機張）",
+          "mapUrl": "[NAVER Maps] Skyline Luge 釜山 釜山广域市 机张郡 机张邑 侍郞里 산46 https://naver.me/xWIGyOSs",
+          "mapQuery": "Skyline Luge 기장",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "釜山PASS 免費玩兩次｜沿機張海岸線俯衝，超刺激\n小孩需達身高限制，長輩可陪同搭纜椅觀景",
+          "activityType": "spot",
+          "isKidFriendly": true,
+          "isSeniorFriendly": false
+        },
+        {
+          "time": "13:00",
+          "links": [],
+          "title": "puradak炸雞",
+          "mapUrl": "[NAVER Maps] Pura鸡釜山海云台站 釜山广域市 海云台区 佑洞 1435-3 https://naver.me/FmGn4aXE",
+          "mapQuery": "puradak炸雞",
+          "photoUrl": null,
+          "priority": null,
+          "description": "炸雞！推推黑蒜、玉米起司",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "15:30",
+          "links": [],
+          "title": "chaseonchaek cafe",
+          "mapUrl": "[NAVER Maps] Chaseonchaek总店 釜山广域市 水营区 民乐洞 179-11 https://naver.me/GkI4dOs1",
+          "mapQuery": "chaseonchaek cafe",
+          "photoUrl": null,
+          "priority": null,
+          "description": "黑芝麻蛋糕很厲害必點！\n吃完可以去附近的選物店逛逛",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "19:30",
+          "links": [],
+          "title": "廣安里鑽石灣遊艇出發",
+          "mapUrl": null,
+          "mapQuery": "다이아몬드베이 광안리",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "週六限定｜遊艇上觀賞廣安大橋無人機煙火秀\n提前一個月訂票，挑「煙火場」次數",
+          "activityType": "ship",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "20:00",
+          "links": [],
+          "title": "廣安里無人機煙火秀",
+          "mapUrl": null,
+          "mapQuery": "광안리 드론쇼",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "週六限定大型無人機秀，廣安大橋＋海面倒影，壯觀震撼",
+          "activityType": "spot",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "22:00",
+          "links": [],
+          "title": "83獬豸",
+          "mapUrl": "[NAVER Maps] 83Haechi广安里店 釜山广域市 水营区 民乐洞 34-7 https://naver.me/GHLfOVhs",
+          "mapQuery": "83獬豸",
+          "photoUrl": null,
+          "priority": null,
+          "description": "烤肉\n8/1開放訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/83haechi_gwanganri",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        }
+      ],
+      "tickets": [
+        {
+          "name": "Skyline Luge 斜坡滑車",
+          "type": "train",
+          "notes": "釜山PASS 免費玩兩次，機張海岸線景色",
+          "datetime": "上午場",
+          "attachments": []
+        },
+        {
+          "name": "鑽石灣遊艇＋無人機煙火秀",
+          "type": "restaurant",
+          "notes": "挑「煙火場」，確認出航時間與煙火施放對齊",
+          "datetime": "週六限定場次，需提前一個月訂",
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "9/27（日）",
+      "title": "西面收尾 × 深夜回台",
+      "themeColor": "rose",
+      "isTravelDay": true,
+      "transport": {
+        "icon": "Car",
+        "mode": "car",
+        "description": "傍晚包車從海雲台前往金海國際機場，19:30–20:00 出發"
+      },
+      "accommodation": null,
+      "activities": [
+        {
+          "time": "09:00",
+          "links": [],
+          "title": "Working Holiday /your type西面早午餐",
+          "mapUrl": "[NAVER Maps] 打工旅行 釜山广域市 水营区 民乐洞 179-3 https://naver.me/GB34GiHf",
+          "mapQuery": "Working Holiday 부산 서면",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "釜山人氣早午餐店，西面商圈核心",
+          "activityType": "food",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "12:00",
+          "links": [],
+          "title": "新世界百貨逛街補貨",
+          "mapUrl": "[NAVER Maps] 新世界百货店Centum城市店 釜山广域市 海云台区 佑洞  1495 https://naver.me/xNpjHK70",
+          "mapQuery": "新世界百貨",
+          "photoUrl": null,
+          "priority": null,
+          "description": "精品潮牌通通有！",
+          "activityType": "spot",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "16:00",
+          "links": [],
+          "title": "火烤豬腳",
+          "mapUrl": "[NAVER Maps] 水边大猪蹄菜包饭 釜山广域市 水营区 民乐洞 181-42 https://naver.me/5Vx49Vy0",
+          "mapQuery": "火烤豬腳",
+          "photoUrl": null,
+          "priority": null,
+          "description": "豬腳、辣味豬腳、白切片拼盤必點\n8/27凌晨可訂位\nhttps://map.naver.com/p/entry/place/1166441536?c=15.00,0,0,0,dh&placePath=%2Fbooking%3FfromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202607261914%26locale%3Dko%26svcName%3Dmap_pcv5%26entry%3Dbmp",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "19:30",
+          "links": [],
+          "title": "包車前往金海機場",
+          "mapUrl": null,
+          "mapQuery": "김해국제공항",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "22:00 起飛，國際線提前 2 小時，19:30–20:00 出發",
+          "activityType": "car",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "22:00",
+          "links": [],
+          "title": "釜山起飛，平安回台",
+          "mapUrl": null,
+          "mapQuery": "김해국제공항",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "五天四夜圓滿收場",
+          "activityType": "flight",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        }
+      ],
+      "tickets": [
+        {
+          "name": "回程班機",
+          "type": "flight",
+          "notes": "國際線提前 2 小時報到，19:30–20:00 出發包車",
+          "datetime": "22:00 PUS → 抵台",
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "packing": [
+    {
+      "id": "8f3074db-65e0-4f61-a519-88f4075dd103",
+      "category": "證件",
+      "item": "護照（所有人）"
+    },
+    {
+      "id": "88560056-c3e1-44a3-804f-b9a48545164f",
+      "category": "證件",
+      "item": "機票電子檔"
+    },
+    {
+      "id": "5fe9e3c4-50a0-4082-9e4c-5753916409ad",
+      "category": "證件",
+      "item": "飯店預訂確認信"
+    },
+    {
+      "id": "e6f1df7f-9b4b-4900-b15d-e90d7649c569",
+      "category": "證件",
+      "item": "旅遊保險單"
+    },
+    {
+      "id": "4cdede11-7f83-4507-b81a-70d5c55157da",
+      "category": "證件",
+      "item": "信用卡 x2"
+    },
+    {
+      "id": "af9ec819-4cdc-4e83-8162-7f2acf43b12e",
+      "category": "證件",
+      "item": "韓幣現金"
+    },
+    {
+      "id": "69ba8640-392a-48aa-aa97-56eaff39a1cb",
+      "category": "證件",
+      "item": "釜山PASS（確認活動兌換）"
+    },
+    {
+      "id": "0a4f916b-7932-40d4-8e4a-984c032693fa",
+      "category": "汗蒸幕／溫泉",
+      "item": "泳衣（Club D Oasis 水上樂園備用）"
+    },
+    {
+      "id": "31af0141-1a74-418f-8af7-d34871363b31",
+      "category": "汗蒸幕／溫泉",
+      "item": "防水袋"
+    },
+    {
+      "id": "940134b8-c032-47cb-b3b1-8b73a45b5a04",
+      "category": "汗蒸幕／溫泉",
+      "item": "夾腳拖（館內走動）"
+    },
+    {
+      "id": "e3e2d4e4-3592-47e5-a953-9899985423f6",
+      "category": "衣物",
+      "item": "換洗衣物（5 天份）"
+    },
+    {
+      "id": "6d3d1a98-ffdf-471c-94b5-b235779a0cc5",
+      "category": "衣物",
+      "item": "薄外套（9 月釜山早晚溫差）"
+    },
+    {
+      "id": "eef6b90f-728d-49e3-a932-6fb3a8ddae93",
+      "category": "衣物",
+      "item": "舒適步行鞋"
+    },
+    {
+      "id": "72fb842d-53c9-4d8d-92b7-44b603a7ced7",
+      "category": "衣物",
+      "item": "折疊雨傘"
+    },
+    {
+      "id": "87380849-f910-4ceb-a88d-3ae5dc397c09",
+      "category": "通用",
+      "item": "充電線 + 行動電源"
+    },
+    {
+      "id": "3b3a8d26-4ce1-4b38-b6c4-d925c94775ea",
+      "category": "通用",
+      "item": "轉接插頭（韓國 Type C）"
+    },
+    {
+      "id": "2d34d1f9-986d-4965-8405-2786d3c37e05",
+      "category": "通用",
+      "item": "防曬乳"
+    },
+    {
+      "id": "b975f93b-6392-4280-aa5b-d03b9a8003ed",
+      "category": "通用",
+      "item": "個人盥洗用品"
+    },
+    {
+      "id": "796648c4-132f-441b-981d-dcdb33f0cb9c",
+      "category": "通用",
+      "item": "塑膠袋（裝髒衣服）"
+    },
+    {
+      "id": "06c1861f-11fe-49d2-a1f9-08aeb03871f7",
+      "category": "通用",
+      "item": "相機 / 記憶卡"
+    },
+    {
+      "id": "cdade513-4d1a-4e61-bc87-8fe98e7dc9c2",
+      "category": "通用",
+      "item": "口罩（飛機用）"
+    },
+    {
+      "id": "65c7278e-f877-438f-9fc1-bad1beb10c62",
+      "category": "通用",
+      "item": "暈車藥"
+    },
+    {
+      "id": "01de86da-85f5-4afa-8bc2-f59578d1054c",
+      "category": "通用",
+      "item": "韓文翻譯 App（Papago）"
+    },
+    {
+      "id": "af5b5ecb-23fa-47e3-8e62-501995d06574",
+      "category": "通用",
+      "item": "Esim"
+    }
+  ],
+  "shopping": [
+    {
+      "category": "藥妝店必買",
+      "items": [
+        {
+          "name": "韓國面膜（Mediheal / Dr.Jart）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "魚油護膚品（海洋深層保濕）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "韓國防曬（Etude / COSRX）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "正官庄紅蔘精華",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "消化藥（케베라 / 소화제）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "暈車藥（키미테）",
+          "checked": false,
+          "links": []
+        }
+      ]
+    },
+    {
+      "category": "零食伴手禮",
+      "items": [
+        {
+          "name": "海苔（東遠 / CJ 原味大包）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "辣炒年糕醬包",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "蜂蜜奶油薯片（허니버터칩）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "高麗人蔘糖",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "釜山魚板禮盒",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "海雲台鹽味焦糖餅",
+          "checked": false,
+          "links": []
+        }
+      ]
+    },
+    {
+      "category": "生活雜貨",
+      "items": [
+        {
+          "name": "韓國棉質浴巾",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "韓國文具 / 圖案貼紙",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "摺疊購物袋",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "韓國零食禮盒（給朋友）",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "Cortis周邊",
+          "checked": false,
+          "links": []
+        }
+      ]
+    },
+    {
+      "category": "機張特產",
+      "items": [
+        {
+          "name": "機張大閘蟹醬（간장게장）醬料包",
+          "checked": false,
+          "links": []
+        },
+        {
+          "name": "機張鮑魚乾",
+          "checked": false,
+          "links": []
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { useSupabaseData } from '../hooks/useSupabaseData';
 import { supabase } from '../lib/supabase';
 import { shoppingList as hardcodedShoppingList } from '../data/shoppingList';
 import type { ShoppingCategory } from '../data/shoppingList';
+import { liveSnapshot } from '../data/liveSnapshot';
 
 interface ShoppingListProps {
   onBack: () => void;
@@ -54,7 +55,7 @@ export function ShoppingList({ onBack }: ShoppingListProps) {
           })),
       })) as ShoppingCategory[];
     },
-    hardcodedShoppingList
+    liveSnapshot.shopping.length > 0 ? liveSnapshot.shopping : hardcodedShoppingList
   );
 
   // 初始化：從 localStorage 讀取勾選狀態

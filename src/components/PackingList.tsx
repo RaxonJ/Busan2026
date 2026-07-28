@@ -3,6 +3,7 @@ import { ChevronLeft, CheckSquare, Square } from 'lucide-react';
 import { useSupabaseData } from '../hooks/useSupabaseData';
 import { supabase } from '../lib/supabase';
 import { packingList as hardcodedPackingList, type PackingItem } from '../data/packingList';
+import { liveSnapshot } from '../data/liveSnapshot';
 
 interface PackingListProps {
   onBack: () => void;
@@ -47,7 +48,7 @@ export function PackingList({ onBack }: PackingListProps) {
       }
       return items.length > 0 ? items : null;
     },
-    hardcodedPackingList
+    liveSnapshot.packing.length > 0 ? liveSnapshot.packing : hardcodedPackingList
   );
 
   // 從 localStorage 讀取勾選狀態
