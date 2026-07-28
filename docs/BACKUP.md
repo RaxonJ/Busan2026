@@ -35,19 +35,25 @@ shopping_categories, shopping_items, shopping_item_links。
 
 ## 一次性設定
 
-### 1. GitHub Secrets（每日排程備份必需）
+### 1. GitHub Secrets（每日排程備份）
 
-倉庫 → **Settings → Secrets and variables → Actions → New repository secret**，新增兩個：
+備份只需**讀取**權限，用**公開的 anon key** 即可（RLS：public 可 SELECT），
+因此 GitHub Secrets **不需要**放 service_role。倉庫 →
+**Settings → Secrets and variables → Actions**，設兩個（皆為非機密公開值）：
 
 | Secret 名稱 | 值 |
 |---|---|
 | `SUPABASE_URL` | `https://yfbxthgrvclsfxhzvcad.supabase.co` |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Project Settings → API → `service_role` secret |
+| `SUPABASE_ANON_KEY` | Supabase → Project Settings → API → `anon`/`publishable` key |
 
-> `service_role` 金鑰權限很大，**只放在 GitHub Secrets / 本機 `.env`，絕不可進前台程式或 commit**。
+> 已於 2026-07-28 用 `gh secret set` 設定完成。
+> 用 CLI 設定：`printf '%s' "值" | gh secret set SUPABASE_URL`（anon key 同理）。
 
 設定後即生效：每天 UTC 18:00（台灣 02:00）自動備份，並保持資料庫不休眠。
 也可到 **Actions → DB Backup → Run workflow** 手動跑一次驗證。
+
+> **還原**才需要 service_role（寫入），且只放**本機 `.env`**、不進 GitHub。
+> service_role 權限很大，絕不可進前台程式、commit 或 CI logs。
 
 ### 2. 本機執行備份／還原
 

@@ -34,6 +34,9 @@ jobs:
       - name: Run backup
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          # 備份只需讀取權限，anon key 即可；還原（寫回）才需 service_role（放本機 .env）。
+          # 兩者若都設，client 會優先用 service_role。
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SNAPSHOT_SOURCE: >-
             ${{ github.event_name == 'repository_dispatch' && 'edit'
