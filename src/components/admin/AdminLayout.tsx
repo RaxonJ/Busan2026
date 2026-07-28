@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { LogOut, X, RefreshCw, MapPin, Car, Hotel, Ticket, Calendar, ShoppingBag, Package, Plus, Trash2 } from 'lucide-react';
+import { LogOut, X, RefreshCw, MapPin, Car, Hotel, Ticket, Calendar, ShoppingBag, Package, Plus, Trash2, History } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { useAdminAuth } from '../../hooks/useAdminAuth';
 import { DayEditor } from './DayEditor';
@@ -9,6 +9,7 @@ import { AccommodationEditor } from './AccommodationEditor';
 import { TicketEditor } from './TicketEditor';
 import { PackingListEditor } from './PackingListEditor';
 import { ShoppingListEditor } from './ShoppingListEditor';
+import { RestorePanel } from './RestorePanel';
 import { ConfirmDialog } from './ConfirmDialog';
 import { createDay, deleteDay } from '../../hooks/useAdminMutations';
 import { triggerSnapshot } from '../../lib/snapshotTrigger';
@@ -16,7 +17,8 @@ import type { DayPlanViewRow } from '../../types/database';
 
 type Section = 'day' | 'activities' | 'transport' | 'accommodation' | 'tickets';
 type GlobalSection = 'packing' | 'shopping';
-type ActiveView = Section | GlobalSection;
+type SystemSection = 'restore';
+type ActiveView = Section | GlobalSection | SystemSection;
 
 const SECTIONS: { id: Section; label: string; Icon: React.ElementType }[] = [
   { id: 'day',           label: '基本資訊', Icon: Calendar },
@@ -75,7 +77,7 @@ export function AdminLayout({ onClose }: AdminLayoutProps) {
   }, []);
 
   const currentDay = days.find((d) => d.day === selectedDay);
-  const isDayView = activeView !== 'packing' && activeView !== 'shopping';
+  const isDayView = activeView !== 'packing' && activeView !== 'shopping' && activeView !== 'restore';
 
   const handleSignOut = async () => {
     await signOut();
@@ -236,6 +238,8 @@ export function AdminLayout({ onClose }: AdminLayoutProps) {
             <span className="hidden sm:block text-sm text-[#8C8C8C]">打包清單</span>
           ) : activeView === 'shopping' ? (
             <span className="hidden sm:block text-sm text-[#8C8C8C]">購物清單</span>
+          ) : activeView === 'restore' ? (
+            <span className="hidden sm:block text-sm text-[#8C8C8C]">備份還原</span>
           ) : currentDay ? (
             <span className="hidden sm:block text-sm text-[#8C8C8C]">
               Day {currentDay.day} · {currentDay.title}
@@ -395,6 +399,22 @@ export function AdminLayout({ onClose }: AdminLayoutProps) {
                 );
               })}
             </div>
+
+            {/* 系統維護 section */}
+            <div className="mt-3 pt-3 border-t border-stone-100">
+              <p className="px-4 pb-1 text-[10px] uppercase tracking-widest text-stone-400 font-semibold">系統維護</p>
+              <button
+                onClick={() => { setActiveView('restore'); setSidebarOpen(false); }}
+                className={`w-full flex items-center gap-2 px-4 py-2.5 text-sm cursor-pointer transition-colors border-l-2 ${
+                  activeView === 'restore'
+                    ? 'border-l-[#2C4F7C] bg-[#2C4F7C]/8 text-[#2C4F7C] font-medium'
+                    : 'border-l-transparent text-[#2C2C2C] hover:bg-stone-100/80'
+                }`}
+              >
+                <History className="w-3.5 h-3.5" />
+                備份還原
+              </button>
+            </div>
           </nav>
         </aside>
 
@@ -440,6 +460,7 @@ export function AdminLayout({ onClose }: AdminLayoutProps) {
             >
               {activeView === 'packing' && <PackingListEditor />}
               {activeView === 'shopping' && <ShoppingListEditor />}
+              {activeView === 'restore' && <RestorePanel onRestored={refresh} />}
               {isDayView && (
                 !currentDay ? (
                   <div className="text-center py-16 text-[#8C8C8C]">
