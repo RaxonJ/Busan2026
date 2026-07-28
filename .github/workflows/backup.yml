@@ -13,26 +13,50 @@ on:
 
 permissions:
   contents: write
+  actions: write   # 供到期後自我停用排程
 
 concurrency:
   group: db-backup
   cancel-in-progress: false
 
+env:
+  # 旅行結束後的截止日：到期即自動停用每日備份與防休眠，讓 Supabase 免費專案自然休眠、釋放名額
+  BACKUP_CUTOFF: '2026-10-28'
+
 jobs:
   backup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: 檢查備份有效期（到期自動停用）
+        id: window
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TODAY=$(date -u +%F)
+          if [[ "$TODAY" > "$BACKUP_CUTOFF" ]]; then
+            echo "今天 $TODAY 已超過截止日 $BACKUP_CUTOFF → 停用每日備份排程。"
+            gh workflow disable "DB Backup" --repo "$GITHUB_REPOSITORY" || true
+            echo "expired=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "在有效期內（截止 $BACKUP_CUTOFF），照常備份。"
+            echo "expired=false" >> "$GITHUB_OUTPUT"
+          fi
 
-      - uses: actions/setup-node@v4
+      - if: steps.window.outputs.expired != 'true'
+        uses: actions/checkout@v4
+
+      - if: steps.window.outputs.expired != 'true'
+        uses: actions/setup-node@v4
         with:
           # 需 22+：supabase-js 的 realtime 在 Node 20 缺少原生 WebSocket 會報錯
           node-version: 22
 
       - name: Install deps
+        if: steps.window.outputs.expired != 'true'
         run: npm install --no-audit --no-fund
 
       - name: Run backup
+        if: steps.window.outputs.expired != 'true'
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           # 備份只需讀取權限，anon key 即可；還原（寫回）才需 service_role（放本機 .env）。
@@ -46,6 +70,7 @@ jobs:
         run: node scripts/backup.mjs
 
       - name: Commit snapshot if changed
+        if: steps.window.outputs.expired != 'true'
         run: |
           git config user.name "busan-backup-bot"
           git config user.email "actions@users.noreply.github.com"
