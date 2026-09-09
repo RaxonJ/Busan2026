@@ -54,7 +54,7 @@
           "mapQuery": "水邊最高豬肉湯飯",
           "photoUrl": null,
           "priority": null,
-          "description": "1392-35 Jung-dong Haeundae-gu Busan",
+          "description": "1392-35 Jung-dong Haeundae-gu Busan\n推薦豬頸肉",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -106,7 +106,7 @@
           "mapQuery": "柳氏家辣炒鐵板雞排",
           "photoUrl": null,
           "priority": null,
-          "description": null,
+          "description": "雞肉蔬菜炒飯、烏龍麵、加起司！",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -158,38 +158,12 @@
         {
           "time": "09:00",
           "links": [],
-          "title": "自然島鹽麵包",
-          "mapUrl": "[NAVER Maps] Jayeon Do盐面包&自然Do Hae 釜山广域市 海云台区 中洞 1085-4 https://naver.me/FFqjAJfK",
-          "mapQuery": "自然島鹽麵包",
+          "title": "mumu麵包店",
+          "mapUrl": "[NAVER Maps] Who's who Mumu西饼店 釜山广域市 海云台区 中洞 940-3 https://naver.me/Ge7VVyb9",
+          "mapQuery": "who’s who mumu",
           "photoUrl": null,
           "priority": null,
-          "description": "九點開賣 可以先去排隊買麵包在膠囊列車上吃 只接受信用卡結帳",
-          "activityType": null,
-          "isKidFriendly": true,
-          "isSeniorFriendly": true
-        },
-        {
-          "time": "10:00",
-          "links": [],
-          "title": "膠囊列車（블루라인파크）",
-          "mapUrl": "[NAVER Maps] 海云台Blue Line Park Mipo停车场 釜山广域市 海云台区 中洞 1019-2 https://naver.me/x7egq6Vh",
-          "mapQuery": "膠囊列車（블루라인파크）",
-          "photoUrl": null,
-          "priority": "must",
-          "description": "尾浦→青沙埔，靠海車廂海景絕美\n8/25 早上六點訂票！10:00（早上拍比較不會有陰影）",
-          "activityType": "train",
-          "isKidFriendly": true,
-          "isSeniorFriendly": true
-        },
-        {
-          "time": "10:30",
-          "links": [],
-          "title": "小鎌倉",
-          "mapUrl": null,
-          "mapQuery": null,
-          "photoUrl": null,
-          "priority": null,
-          "description": "下車後就可以看到",
+          "description": "麵包無雷都很推薦尤其是明太子 還有杜拜巧克力",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -197,12 +171,25 @@
         {
           "time": "11:00",
           "links": [],
-          "title": "lua & Tigre",
-          "mapUrl": "[NAVER Maps] Rua&Tigeuri 釜山广域市 海云台区 中洞 505-3 https://naver.me/5l2smIwy",
-          "mapQuery": "lua & Tigre",
+          "title": "膠囊列車（블루라인파크）",
+          "mapUrl": "[NAVER Maps] 海云台Blue Line Park Mipo停车场 釜山广域市 海云台区 中洞 1019-2 https://naver.me/x7egq6Vh",
+          "mapQuery": "膠囊列車（블루라인파크）",
+          "photoUrl": null,
+          "priority": "must",
+          "description": "尾浦→青沙埔，靠海車廂海景絕美\n11:00-11:30之間上車",
+          "activityType": "train",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "11:00",
+          "links": [],
+          "title": "올바릇식당 청사포점",
+          "mapUrl": "[NAVER Maps] Olbareut饭店青沙浦店 釜山广域市 海云台区 中洞 633-1 https://naver.me/GdT77cks",
+          "mapQuery": "올바릇식당 청사포점",
           "photoUrl": null,
           "priority": null,
-          "description": "pizza 義大利麵",
+          "description": "炒飯 血蛤 煎餅\n可以看到海岸膠囊列車的餐廳",
           "activityType": "food",
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -234,28 +221,15 @@
           "isSeniorFriendly": true
         },
         {
-          "time": "16:00",
+          "time": "18:30",
           "links": [],
-          "title": "海雲台商圈",
-          "mapUrl": "[NAVER Maps] Mipi商店釜山 釜山广域市 海云台区 中洞 1035-2 https://naver.me/5VxWBgWs",
-          "mapQuery": "海雲台商圈",
+          "title": "烤腸！",
+          "mapUrl": "[NAVER Maps] Michin肥肠釜山Seomyeon店 釜山广域市 釜山镇区 釜田洞 152-3 https://naver.me/Ix0Tqn9f",
+          "mapQuery": "미친막창",
           "photoUrl": null,
           "priority": null,
-          "description": "新的米菲兔專賣店在這附近！",
+          "description": "在西門商圈 有免費小菜冰沙泡麵紅豆刨冰 最後還可以加點炒飯",
           "activityType": null,
-          "isKidFriendly": true,
-          "isSeniorFriendly": true
-        },
-        {
-          "time": "18:00",
-          "links": [],
-          "title": "辣燉排骨 玉米煎餅",
-          "mapUrl": "[NAVER Maps] 红猪三昧境 釜山广域市 釜山镇区 釜田洞 100-6 https://naver.me/xbKHqc4o",
-          "mapQuery": "빨간돼지삼매경",
-          "photoUrl": null,
-          "priority": null,
-          "description": "辣燉排骨店家會去骨 最後還可以炒飯\n明太魚湯和有玉米煎餅推推",
-          "activityType": "food",
           "isKidFriendly": true,
           "isSeniorFriendly": true
         }
@@ -425,7 +399,7 @@
           "mapQuery": "puradak炸雞",
           "photoUrl": null,
           "priority": null,
-          "description": "炸雞！推推黑蒜、玉米起司",
+          "description": "炸雞！推推黑蒜、玉米起司、青辣椒美乃滋",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -439,6 +413,19 @@
           "photoUrl": null,
           "priority": null,
           "description": "黑芝麻蛋糕很厲害必點！\n吃完可以去附近的選物店逛逛",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "16:00",
+          "links": [],
+          "title": "83獬豸",
+          "mapUrl": "[NAVER Maps] 83Haechi广安里店 釜山广域市 水营区 民乐洞 34-7 https://naver.me/GHLfOVhs",
+          "mapQuery": "83獬豸",
+          "photoUrl": null,
+          "priority": null,
+          "description": "烤肉\n完成訂位 16:00 4位",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -466,19 +453,6 @@
           "priority": "must",
           "description": "週六限定大型無人機秀，廣安大橋＋海面倒影，壯觀震撼",
           "activityType": "spot",
-          "isKidFriendly": true,
-          "isSeniorFriendly": true
-        },
-        {
-          "time": "22:00",
-          "links": [],
-          "title": "83獬豸",
-          "mapUrl": "[NAVER Maps] 83Haechi广安里店 釜山广域市 水营区 民乐洞 34-7 https://naver.me/GHLfOVhs",
-          "mapQuery": "83獬豸",
-          "photoUrl": null,
-          "priority": null,
-          "description": "烤肉\n完成訂位 16:00 4位",
-          "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
         }
@@ -534,7 +508,7 @@
           "mapQuery": "新世界百貨",
           "photoUrl": null,
           "priority": null,
-          "description": "精品潮牌通通有！",
+          "description": "精品潮牌通通有！\n樓上也還有一家可以使用釜山pass的汗蒸幕可以休息\nB1有好吃麵包 la poeyu",
           "activityType": "spot",
           "isKidFriendly": true,
           "isSeniorFriendly": true
