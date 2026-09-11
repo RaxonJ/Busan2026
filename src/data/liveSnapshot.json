@@ -12,9 +12,9 @@
         "description": "機場包車直接前往海雲台 LCT，車程約 40 分鐘"
       },
       "accommodation": {
-        "name": "海雲台飯店",
+        "name": "The Place 34",
         "links": [],
-        "mapQuery": "해운대 호텔",
+        "mapQuery": "부산 해운대구 구남로21번길 6",
         "photoUrl": null,
         "attachments": [],
         "description": "靠近 LCT 塔樓，步行可達"
@@ -223,12 +223,12 @@
         {
           "time": "18:30",
           "links": [],
-          "title": "烤腸！",
-          "mapUrl": "[NAVER Maps] Michin肥肠釜山Seomyeon店 釜山广域市 釜山镇区 釜田洞 152-3 https://naver.me/Ix0Tqn9f",
-          "mapQuery": "미친막창",
+          "title": "辣燉排骨",
+          "mapUrl": "[NAVER Maps] 红猪三昧境 釜山广域市 釜山镇区 釜田洞 100-6 https://naver.me/5rebar4d",
+          "mapQuery": "紅豬排骨",
           "photoUrl": null,
           "priority": null,
-          "description": "在西門商圈 有免費小菜冰沙泡麵紅豆刨冰 最後還可以加點炒飯",
+          "description": "在西門商圈 辣燉排骨 玉米煎餅",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
