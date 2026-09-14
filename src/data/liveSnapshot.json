@@ -197,7 +197,7 @@
         {
           "time": "14:00",
           "links": [],
-          "title": "Liberta 麵包咖啡/broni cafe",
+          "title": "Liberta 麵包咖啡",
           "mapUrl": "[NAVER Maps] Ribereuta青沙浦店 釜山广域市 海云台区 中洞 524-14 https://naver.me/FIcS2Qrv",
           "mapQuery": "청사포 liberta",
           "photoUrl": null,
@@ -278,6 +278,19 @@
           "isSeniorFriendly": true
         },
         {
+          "time": "12:00",
+          "links": [],
+          "title": "李宰模披薩",
+          "mapUrl": "[NAVER Maps] Ijaemo比萨总店 釜山广域市 中区 新昌洞一街 2-1 https://naver.me/I5wNWFVW",
+          "mapQuery": "이재모피자 본점",
+          "photoUrl": null,
+          "priority": null,
+          "description": "李宰模披薩 總店\n起司脆皮披薩 餅邊全起司 全香腸\n七天前訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/leejaemo",
+          "activityType": "food",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
           "time": "13:00",
           "links": [],
           "title": "momos",
@@ -287,19 +300,6 @@
           "priority": null,
           "description": "可以買咖啡豆",
           "activityType": null,
-          "isKidFriendly": true,
-          "isSeniorFriendly": true
-        },
-        {
-          "time": "13:30",
-          "links": [],
-          "title": "李宰模披薩",
-          "mapUrl": "[NAVER Maps] Ijaemo比萨总店 釜山广域市 中区 新昌洞一街 2-1 https://naver.me/I5wNWFVW",
-          "mapQuery": "이재모피자 본점",
-          "photoUrl": null,
-          "priority": null,
-          "description": "李宰模披薩 總店\n起司脆皮披薩 餅邊全起司 全香腸\n七天前訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/leejaemo",
-          "activityType": "food",
           "isKidFriendly": true,
           "isSeniorFriendly": true
         },
@@ -332,12 +332,12 @@
         {
           "time": "17:00",
           "links": [],
-          "title": "新世界百貨逛街！",
-          "mapUrl": null,
-          "mapQuery": null,
+          "title": "gowon烤肉",
+          "mapUrl": "312-26 Jeonpo-dong Busanjin-gu Busan",
+          "mapQuery": "gowon烤肉",
           "photoUrl": null,
           "priority": null,
-          "description": "3樓先辦會員拿優惠券",
+          "description": "已訂位17:00\nhttps://www.catchtable.net/zh-TW/explore/shop/gowon",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -345,12 +345,12 @@
         {
           "time": "19:00",
           "links": [],
-          "title": "gowon烤肉",
-          "mapUrl": "312-26 Jeonpo-dong Busanjin-gu Busan",
-          "mapQuery": "gowon烤肉",
+          "title": "西面商圈",
+          "mapUrl": null,
+          "mapQuery": null,
           "photoUrl": null,
           "priority": null,
-          "description": "10天前開放訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/gowon",
+          "description": null,
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
@@ -405,14 +405,14 @@
           "isSeniorFriendly": true
         },
         {
-          "time": "15:30",
+          "time": "14:30",
           "links": [],
-          "title": "chaseonchaek cafe",
-          "mapUrl": "[NAVER Maps] Chaseonchaek总店 釜山广域市 水营区 民乐洞 179-11 https://naver.me/GkI4dOs1",
-          "mapQuery": "chaseonchaek cafe",
+          "title": "ovone 咖啡店",
+          "mapUrl": "[NAVER Maps] Of Won 釜山广域市 海云台区 中洞 1037-2 https://naver.me/58qrylKx",
+          "mapQuery": "ovone 咖啡店",
           "photoUrl": null,
           "priority": null,
-          "description": "黑芝麻蛋糕很厲害必點！\n吃完可以去附近的選物店逛逛",
+          "description": "水果千層",
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
