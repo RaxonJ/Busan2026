@@ -265,20 +265,7 @@
       },
       "activities": [
         {
-          "time": "10:30",
-          "links": [],
-          "title": "Arte Museum",
-          "mapUrl": "[NAVER Maps] Arte博物馆釜山 釜山广域市 影岛区 东三洞 201-74 https://naver.me/50BGikfO",
-          "mapQuery": "Arte Museum",
-          "photoUrl": null,
-          "priority": null,
-          "description": null,
-          "activityType": null,
-          "isKidFriendly": true,
-          "isSeniorFriendly": true
-        },
-        {
-          "time": "12:00",
+          "time": "09:50",
           "links": [],
           "title": "李宰模披薩",
           "mapUrl": "[NAVER Maps] Ijaemo比萨总店 釜山广域市 中区 新昌洞一街 2-1 https://naver.me/I5wNWFVW",
@@ -287,6 +274,19 @@
           "priority": null,
           "description": "李宰模披薩 總店\n起司脆皮披薩 餅邊全起司 全香腸\n七天前訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/leejaemo",
           "activityType": "food",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "11:30",
+          "links": [],
+          "title": "Arte Museum",
+          "mapUrl": "[NAVER Maps] Arte博物馆釜山 釜山广域市 影岛区 东三洞 201-74 https://naver.me/50BGikfO",
+          "mapQuery": "Arte Museum",
+          "photoUrl": null,
+          "priority": null,
+          "description": null,
+          "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
         },
