@@ -265,14 +265,14 @@
       },
       "activities": [
         {
-          "time": "09:50",
+          "time": "09:20",
           "links": [],
           "title": "李宰模披薩",
           "mapUrl": "[NAVER Maps] Ijaemo比萨总店 釜山广域市 中区 新昌洞一街 2-1 https://naver.me/I5wNWFVW",
           "mapQuery": "이재모피자 본점",
           "photoUrl": null,
           "priority": null,
-          "description": "李宰模披薩 總店\n起司脆皮披薩 餅邊全起司 全香腸\n七天前訂位\nhttps://www.catchtable.net/zh-TW/explore/shop/leejaemo",
+          "description": "李宰模披薩 總店\n起司脆皮披薩 餅邊全起司 全香腸\n完成訂位",
           "activityType": "food",
           "isKidFriendly": true,
           "isSeniorFriendly": true
