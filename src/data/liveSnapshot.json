@@ -232,6 +232,19 @@
           "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
+        },
+        {
+          "time": "21:30",
+          "links": [],
+          "title": "Corduroy Fellaz",
+          "mapUrl": "[NAVER Maps] Kodyuroi Pellajeu 釜山广域市 水营区 民乐洞 181-51 https://naver.me/5o0BUsdT",
+          "mapQuery": "Corduroy Fellaz",
+          "photoUrl": null,
+          "priority": null,
+          "description": "完成訂位 已付訂金",
+          "activityType": null,
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
         }
       ],
       "tickets": [
@@ -453,6 +466,19 @@
           "priority": "must",
           "description": "週六限定大型無人機秀，廣安大橋＋海面倒影，壯觀震撼",
           "activityType": "spot",
+          "isKidFriendly": true,
+          "isSeniorFriendly": true
+        },
+        {
+          "time": "21:30",
+          "links": [],
+          "title": "Hongdan酒吧",
+          "mapUrl": "[NAVER Maps] Hongdan 釜山广域市 水营区 民乐洞 711-2 https://naver.me/GuCVvFDy",
+          "mapQuery": "Hongdan酒吧",
+          "photoUrl": null,
+          "priority": null,
+          "description": null,
+          "activityType": null,
           "isKidFriendly": true,
           "isSeniorFriendly": true
         }
